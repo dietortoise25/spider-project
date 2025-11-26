@@ -8,10 +8,13 @@ WORKDIR /app
 RUN npm install -g pnpm@10.14.0
 
 # 复制包管理文件
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
+
+# 配置pnpm镜像源
+RUN pnpm config set registry https://registry.npmmirror.com
 
 # 安装依赖
-RUN pnpm install --frozen-lockfile
+RUN pnpm install
 
 # 复制应用代码
 COPY . .
