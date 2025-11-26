@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ master ]
 
+# 并发控制：取消之前的工作流
+concurrency:
+  group: deployment
+  cancel-in-progress: true
+
 env:
   REGISTRY: docker.io
   FRONTEND_IMAGE_NAME: alan0125alan0125/spider-frontend
