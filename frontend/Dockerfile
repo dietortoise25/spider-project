@@ -5,13 +5,16 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 # 复制包管理文件
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
 
 # 安装pnpm
 RUN npm install -g pnpm@10.14.0
 
+# 配置pnpm镜像源
+RUN pnpm config set registry https://registry.npmmirror.com
+
 # 安装依赖
-RUN pnpm install --frozen-lockfile
+RUN pnpm install
 
 # 复制源代码
 COPY . .
