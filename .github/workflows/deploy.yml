@@ -2,9 +2,9 @@ name: Deploy to Production
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 env:
   REGISTRY: docker.io
@@ -63,7 +63,7 @@ jobs:
   build-and-push:
     needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
 
     steps:
     - name: Checkout code
@@ -124,7 +124,7 @@ jobs:
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     environment: production
 
     steps:
@@ -149,7 +149,7 @@ jobs:
 
           # 拉取最新代码
           if [ -d ".git" ]; then
-            git pull origin main
+            git pull origin master
           else
             git clone https://github.com/${{ github.repository }}.git .
           fi
