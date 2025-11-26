@@ -22,4 +22,5 @@ build/
 Thumbs.db
 
 # Docker
-.dockerignore
+.dockerignoreGITHUB_SECRETS_SETUP.md
+ecs_deploy_key*
