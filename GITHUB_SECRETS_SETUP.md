@@ -1,0 +1,122 @@
+# GitHub Secrets 配置指南
+
+## 必需的 Secrets
+
+### Docker Hub 配置
+- `DOCKER_USERNAME`: `alan0125alan0125`
+- `DOCKER_PASSWORD`: Docker Hub Access Token (不是密码)
+
+### ECS 服务器配置
+- `ECS_HOST`: `8.148.208.237`
+- `ECS_USER`: `root`
+- `ECS_SSH_KEY`: 下方私钥内容
+
+## SSH 密钥配置
+
+### 新的SSH密钥对 (2025-11-26 生成)
+
+**私钥 (用于 GitHub Secrets - ECS_SSH_KEY):**
+```
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+-----END OPENSSH PRIVATE KEY-----
+```
+
+**公钥 (需要添加到 ECS 服务器 ~/.ssh/authorized_keys):**
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCj57auxeeXC1YnL40fGXqOTlXcf5y21ywjgOdzfMQZksq/muDm39t78bB+JRmAlVyBHLOCTV/A2ZZ1RAGp6ZSnDvZnMI1Aa0hGLBBGdl+QnOs4lVU8t8HqQmS2ymemw8IARo7EwI8W1HSIDFWU2JJ+6Nt/t178+Ij1CcCpy0bGw55SbsjPNm6PUrLFiW/Ks7/P2rPdp6LEvyIKjBuw9RQ7I3aLCtvThzeAkaq4KnJRaebECft0/a6Mo2OKit99jrfsBUFed8NNwjztkwZqbw1/j/zVvKNaIBDGwdgrL2dwYA/f9wWNj81tX7FvtNOc69yHOoPEVnRda5Fbv2E4XMRK6GkrMHX4d/ZtD+TGv6Q4PW4qrJ3MBq0CrEbJQhvPeIl5RBuM0WmarN4g23hjeUjkiwgrPsFLrtHu9uwiDa5oA2aZQ6mm+osMlMWim8puX1uWpgdicIZ0Un5tkNB4mTPFPioXjMsa9eLS7SBCbqKT1kvwNQTYnH9bS4U1giRknF7rVIYmM+06KtoDV/TIiL8Yj+i7GRtD53sirE9sVabp8sjYW8XO66fYMILpuXsMjOvmhMQGutlrQsWJzmHguXzkmgWjbcmqOVuRDXCbw9h6mKEX9bgyTJ8UH2z3x7hI0ljquKoLUUeN9jptnB9UNd0z+4kQp59ay2qzg9e7kWSBOw== github-actions@spider-project
+```
+
+## 配置步骤
+
+### 1. 更新 GitHub Secrets
+
+访问：https://github.com/alan0125alan0125/spider-project/settings/secrets/actions
+
+添加或更新以下 Secrets：
+- `DOCKER_USERNAME`: `alan0125alan0125`
+- `DOCKER_PASSWORD`: 你的Docker Hub Access Token
+- `ECS_HOST`: `8.148.208.237`
+- `ECS_USER`: `root`
+- `ECS_SSH_KEY`: 上方完整的私钥内容（包括 BEGIN 和 END 行）
+
+### 2. 配置 ECS 服务器 SSH 访问
+
+SSH 连接到 ECS 服务器：
+```bash
+ssh root@8.148.208.237
+```
+
+执行以下命令：
+```bash
+# 创建 .ssh 目录（如果不存在）
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+
+# 添加公钥到 authorized_keys
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCj57auxeeXC1YnL40fGXqOTlXcf5y21ywjgOdzfMQZksq/muDm39t78bB+JRmAlVyBHLOCTV/A2ZZ1RAGp6ZSnDvZnMI1Aa0hGLBBGdl+QnOs4lVU8t8HqQmS2ymemw8IARo7EwI8W1HSIDFWU2JJ+6Nt/t178+Ij1CcCpy0bGw55SbsjPNm6PUrLFiW/Ks7/P2rPdp6LEvyIKjBuw9RQ7I3aLCtvThzeAkaq4KnJRaebECft0/a6Mo2OKit99jrfsBUFed8NNwjztkwZqbw1/j/zVvKNaIBDGwdgrL2dwYA/f9wWNj81tX7FvtNOc69yHOoPEVnRda5Fbv2E4XMRK6GkrMHX4d/ZtD+TGv6Q4PW4qrJ3MBq0CrEbJQhvPeIl5RBuM0WmarN4g23hjeUjkiwgrPsFLrtHu9uwiDa5oA2aZQ6mm+osMlMWim8puX1uWpgdicIZ0Un5tkNB4mTPFPioXjMsa9eLS7SBCbqKT1kvwNQTYnH9bS4U1giRknF7rVIYmM+06KtoDV/TIiL8Yj+i7GRtD53sirE9sVabp8sjYW8XO66fYMILpuXsMjOvmhMQGutlrQsWJzmHguXzkmgWjbcmqOVuRDXCbw9h6mKEX9bgyTJ8UH2z3x7hI0ljquKoLUUeN9jptnB9UNd0z+4kQp59ay2qzg9e7kWSBOw== github-actions@spider-project" >> ~/.ssh/authorized_keys
+
+# 设置正确的权限
+chmod 600 ~/.ssh/authorized_keys
+
+# 验证配置
+cat ~/.ssh/authorized_keys
+```
+
+### 3. 验证配置
+
+配置完成后，推送新的代码到 GitHub 仓库来测试 CI/CD 流水线。
+
+## 故障排除
+
+如果 SSH 连接仍然失败：
+1. 确认 GitHub Secrets 中的私钥格式正确（包括换行符）
+2. 确认 ECS 服务器上的 authorized_keys 文件权限为 600
+3. 确认 ECS 服务器上 .ssh 目录权限为 700
+4. 检查 ECS 服务器 SSH 服务运行状态：`systemctl status sshd`
