@@ -1,0 +1,56 @@
+# 依赖目录
+node_modules/
+**/node_modules/
+
+# 构建输出
+dist/
+build/
+**/dist/
+**/build/
+
+# 开发工具配置
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+logs/
+*.log
+
+# 环境变量
+.env
+.env.*
+!.env.example
+
+# Git
+.git/
+.gitignore
+
+# Docker相关
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# 测试覆盖率
+coverage/
+
+# 临时文件
+*.tmp
+*.temp
+
+# 文档
+README.md
+*.md
+
+# CI/CD
+.github/
+
+# 包管理器缓存
+.npm/
+.pnpm-store/
+cache/
