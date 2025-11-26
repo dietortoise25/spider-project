@@ -39,8 +39,12 @@ jobs:
       working-directory: ./frontend
       run: |
         pnpm install --frozen-lockfile || pnpm install
-        # 确保有锁文件用于Docker构建
+
+    - name: Generate pnpm lockfile for Docker build
+      working-directory: ./frontend
+      run: |
         pnpm install --lockfile-only || true
+        ls -la pnpm-lock.yaml || echo "No pnpm-lock.yaml generated"
 
     - name: Install backend dependencies
       working-directory: ./backend
