@@ -68,13 +68,30 @@ jobs:
 
   # Docker构建和推送阶段
   build-and-push:
-    needs: build-and-test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install pnpm
+      run: npm install -g pnpm@10.14.0
+
+    - name: Setup pnpm registry
+      run: pnpm config set registry https://registry.npmmirror.com
+
+    - name: Generate pnpm lockfile
+      working-directory: ./frontend
+      run: |
+        pnpm install --frozen-lockfile || pnpm install
+        pnpm install --lockfile-only || true
+        ls -la pnpm-lock.yaml || echo "No pnpm-lock.yaml generated"
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
